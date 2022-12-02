@@ -1,15 +1,20 @@
 import { Text, useSx, View, H1, P, Row, A } from 'dripsy'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
+import { trpc } from '@my/trpc-client'
 
 export function HomeScreen() {
   const sx = useSx()
+  const hello = trpc.hello.useQuery({ text: 'darlin' })
 
   return (
     <View
       sx={{ flex: 1, justifyContent: 'center', alignItems: 'center', p: 16 }}
     >
-      <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1>
+      {/* <H1 sx={{ fontWeight: '800' }}>Welcome to Solito.</H1> */}
+      <H1 sx={{ fontWeight: '800' }}>
+        {hello.data ? hello.data.greeting : 'oh hi'}
+      </H1>
       <View sx={{ maxWidth: 600 }}>
         <P sx={{ textAlign: 'center' }}>
           Here is a basic starter to show you how you can navigate from one

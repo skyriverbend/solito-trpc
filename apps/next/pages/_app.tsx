@@ -18,30 +18,21 @@ import type { SolitoAppProps } from 'solito'
 import { trpc } from '@my/trpc-client'
 
 function MyApp({ Component, pageProps }: SolitoAppProps) {
-  const hello = trpc.hello.useQuery({ text: 'client' })
-  if (!hello.data) {
-    return <div>Loading...</div>
-  }
   return (
-    <div>
-      <p>{hello.data.greeting}</p>
-    </div>
+    <>
+      <Head>
+        <title>Solito Example App</title>
+        <meta
+          name="description"
+          content="Expo + Next.js with Solito. By Fernando Rojo."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Provider>
+        <Component {...pageProps} />
+      </Provider>
+    </>
   )
-  // return (
-  //   <>
-  //     <Head>
-  //       <title>Solito Example App</title>
-  //       <meta
-  //         name="description"
-  //         content="Expo + Next.js with Solito. By Fernando Rojo."
-  //       />
-  //       <link rel="icon" href="/favicon.ico" />
-  //     </Head>
-  //     <Provider>
-  //       <Component {...pageProps} />
-  //     </Provider>
-  //   </>
-  // )
 }
 
 export default trpc.withTRPC(MyApp)
