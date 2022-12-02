@@ -15,5 +15,9 @@ config.resolver.nodeModulesPaths = [
   path.resolve(projectRoot, 'node_modules'),
   path.resolve(workspaceRoot, 'node_modules'),
 ]
+config.resolver.sourceExts.push(
+  // Needed for superjson dependency (copy-anything)
+  'cjs'
+)
 
 module.exports = config
