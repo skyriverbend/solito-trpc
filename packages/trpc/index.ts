@@ -1,1 +1,1 @@
-export { trpc } from './utils/trpc'
+export { appRouter } from './appRouter'

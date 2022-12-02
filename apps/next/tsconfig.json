@@ -15,6 +15,14 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "app-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "app-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../../packages/trpc-client/trpc.ts",
+    "../../packages/trpc-client/trpc.ts",
+    "../../packages/trpc/trpc.ts"
+  ],
   "exclude": ["node_modules"]
 }

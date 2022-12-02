@@ -15,7 +15,7 @@ import { Provider } from 'app/provider'
 import Head from 'next/head'
 import React from 'react'
 import type { SolitoAppProps } from 'solito'
-import { trpc } from '@my/trpc'
+import { trpc } from '@my/trpc-client'
 
 function MyApp({ Component, pageProps }: SolitoAppProps) {
   const hello = trpc.hello.useQuery({ text: 'client' })

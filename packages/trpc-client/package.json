@@ -1,0 +1,11 @@
+{
+  "name": "@my/trpc-client",
+  "version": "1.0.0",
+  "main": "trpc.ts",
+  "dependencies": {
+    "@tanstack/react-query": "^4.19.0",
+    "@trpc/client": "^10.4.3",
+    "@trpc/next": "^10.4.3",
+    "@trpc/react-query": "^10.4.3"
+  }
+}
