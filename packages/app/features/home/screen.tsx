@@ -6,6 +6,7 @@ import { trpc } from '@my/trpc-client'
 export function HomeScreen() {
   const sx = useSx()
   const hello = trpc.hello.useQuery({ text: 'darlin' })
+  console.warn(hello)
 
   return (
     <View

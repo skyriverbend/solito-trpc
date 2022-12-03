@@ -4,6 +4,7 @@
   "main": "index.ts",
   "dependencies": {
     "@trpc/server": "^10.4.3",
+    "superjson": "^1.11.0",
     "zod": "^3.19.1"
   },
   "sideEffects": false
