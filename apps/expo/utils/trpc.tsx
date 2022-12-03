@@ -1,5 +1,5 @@
 import { createTRPCReact } from '@trpc/react-query'
-import type { AppRouter } from '@my/trpc'
+import type { AppRouter } from '@my/trpc/appRouter'
 /**
  * A set of typesafe hooks for consuming your API.
  */

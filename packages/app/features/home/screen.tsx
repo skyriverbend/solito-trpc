@@ -1,12 +1,11 @@
 import { Text, useSx, View, H1, P, Row, A } from 'dripsy'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
-import { trpc } from '@my/trpc-client'
+import { trpc } from '@my/trpc/next'
 
 export function HomeScreen() {
   const sx = useSx()
   const hello = trpc.hello.useQuery({ text: 'darlin' })
-  console.warn(hello)
 
   return (
     <View

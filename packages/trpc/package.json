@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@tanstack/react-query": "^4.19.1",
+    "@trpc/client": "^10.4.3",
+    "@trpc/next": "^10.4.3",
+    "@trpc/react-query": "^10.4.3",
     "@trpc/server": "^10.4.3",
     "superjson": "^1.11.0",
     "zod": "^3.19.1"
